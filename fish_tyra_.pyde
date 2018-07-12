@@ -6,33 +6,20 @@ xCoordinate = random (50, 200)
 def setup():
     size(400,400)
     background(0, 0, 255)
-    fish(200,200,40,30)
+    fish(200,200)
     setColor("orange")
-    tail(220,200,250,220,250,180)
+    
      
     
  
        
-def fish(xCoordinate, yCoordinate, fishwidth, fisheight):
+def fish(xCoordinate, yCoordinate):
     fill(255, 128, 0)
-    ellipse(xCoordinate, yCoordinate, fishwidth, fisheight)
+    ellipse(xCoordinate, yCoordinate, 40,30)
+    triangle(xCoordinate + 20, yCoordinate, xCoordinate + 50, xCoordinate + 20, xCoordinate + 50, xCoordinate - 20)
     
-    
-    
-def tail(xCoordinate, yCoordinate, talex, taley, tale1, tale2):
-    fill(255, 128, 0)
-    triangle(xCoordinate, yCoordinate, talex, taley, tale1, tale2)
-    
-# def draw(): 
-#     global xCoordinate, tail, xSpeed, fish
-#        leftBoundary = fish/2
-#        rightBoundary = 400 - fish/2
-#     if xCoordinate >= rightBoundary or xCoordinate <= leftBoundary:
-#        xSpeed = -xSpeed
-#     xCoordinate += xSpeed
-    
-           
-                         
+   
+                                  
                 
 def setColor (colorName):
     if colorName == "orange" :
